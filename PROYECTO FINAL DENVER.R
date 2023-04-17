@@ -16,7 +16,7 @@ info = function(DatosDenver){
 }
 
 #PREGUNTA 1. Realizar un analisis descriptivo de los datos.
-#X3Para 
+#X3
 info(DatosDenver$X3)
 hist(DatosDenver$X3, main="% de niños menores de 18 años", ylab = "Frecuencias" , xlab = "% de niños menores de 18 años", right = F, col="blue")
 boxplot(DatosDenver$X3, main="% de niños menores de 18 años" , col="blue")
