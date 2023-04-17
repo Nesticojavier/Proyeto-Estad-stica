@@ -16,7 +16,7 @@ info = function(DatosDenver){
 }
 
 #PREGUNTA 1. Realizar un analisis descriptivo de los datos.
-#X2
+#X3Para 
 info(DatosDenver$X3)
 hist(DatosDenver$X3, main="Histograma de X3", ylab = "Frecuencias" , xlab = "Histograma de X3", right = F, col="blue")
 boxplot(DatosDenver$X3, main="Diagrama de caja de X3" , col="blue")
@@ -47,19 +47,19 @@ t.test(DatosDenver$X7, conf.level=0.97)$conf.int
 
 #Ahora, para saber la media
 
-#X1
+#Para X1
 mean(DatosDenver$'X1')
-#X2
+#Para X2
 mean(DatosDenver$'X2')
-#X3
+#Para X3
 mean(DatosDenver$'X3')
-#X4
+#Para X4
 mean(DatosDenver$'X4')
-#X5
+#Para X5
 mean(DatosDenver$'X5')
-#X6
+#Para X6
 mean(DatosDenver$'X6')
-#X7
+#Para X7
 mean(DatosDenver$'X7')
 
 #PREGUNTA 3. Prueba por hipotesis de que la media de X7 es negativa, con Ho=0.
