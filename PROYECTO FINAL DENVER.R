@@ -30,19 +30,19 @@ hist(DatosDenver$X6, main="Histograma de X6", ylab = "Frecuencias" , xlab = "His
 boxplot(DatosDenver$X6, main="Diagrama de caja de X6" , col="green")
 
 #PREGUNTA 2. Realice un intervalo de confianza del 97 % para la media de cada variable en estudio
-#X1
+#Para X1
 t.test(DatosDenver$X1, conf.level=0.97)$conf.int
-#X2
+#Para X2
 t.test(DatosDenver$X2, conf.level=0.97)$conf.int
-#X3
+#Para X3
 t.test(DatosDenver$X3, conf.level=0.97)$conf.int
-#X4
+#Para X4
 t.test(DatosDenver$X4, conf.level=0.97)$conf.int
-#X5
-t.test(DatosDenver$X5, conf.level=0.97)$conf.int
-#X6
+#Para X5
+t.test(DatosDenver$X5, conf.level=0.97)$conf.int  
+#Para X6
 t.test(DatosDenver$X6, conf.level=0.97)$conf.int
-#X7
+#Para X7
 t.test(DatosDenver$X7, conf.level=0.97)$conf.int
 
 #Ahora, para saber la media
@@ -110,32 +110,4 @@ summary(m3)
 ## Análisis de residuos
 par(mfrow = c(2,2))
 plot(m3)
-
-
-#Preegunta 9. Con los datos del 20 % restante, haga una prediccíon de la variable X7 (con el mejor modelo) y haga
-#un resumen estadıstico de los residuos de predíccion
-m4= lm(m20pct$X7 ~ m20pct$X3+m20pct$X4)
-summary(m4)
-
-#Ahora, queremos hacer la predicción del modelo. Esto es:
-
-prediccion=(m4$coefficients[1])+(m4$coefficients[2]*m20pct$X3)+(m4$coefficients[3]*m20pct$X4)
-
-#calculamos el error cuadratico medio para ver la efectividad del prediccion
-y = m20pct$X7
-y_pred = prediccion
-n = length(y)
-MSE = sum((y-y_pred)^2)/n
-
-# Luego, los residuos de predicción
-r=m20pct$X7-prediccion
-summary(r)
-
-# La desviación estándar de los residuos de predicción será
-sd(r)
-
-#Histograma y diagrama de caja
-par(mfrow=c(1,2))
-hist(r, main = "Histograma de la predicción", ylab="Frecuencia")
-boxplot(r, main = "Diagrama de la predicción")
 
