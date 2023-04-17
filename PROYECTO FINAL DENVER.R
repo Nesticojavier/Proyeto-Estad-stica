@@ -18,16 +18,16 @@ info = function(DatosDenver){
 #PREGUNTA 1. Realizar un analisis descriptivo de los datos.
 #X3Para 
 info(DatosDenver$X3)
-hist(DatosDenver$X3, main="Histograma de X3", ylab = "Frecuencias" , xlab = "Histograma de X3", right = F, col="blue")
-boxplot(DatosDenver$X3, main="Diagrama de caja de X3" , col="blue")
+hist(DatosDenver$X3, main="% de niños menores de 18 años", ylab = "Frecuencias" , xlab = "% de niños menores de 18 años", right = F, col="blue")
+boxplot(DatosDenver$X3, main="% de niños menores de 18 años" , col="blue")
 #X5
 info(DatosDenver$X5)
-hist(DatosDenver$X5, main="Histograma de X5", ylab = "Frecuencias" , xlab = "Histograma de X5", right = F, col="orange")
-boxplot(DatosDenver$X5, main="Diagrama de caja de X5" , col="orange")
+hist(DatosDenver$X5, main="Cambio porcentual ultimos 5 años", ylab = "Frecuencias" , xlab = "Cambio porcentual ultimos 5 años", right = F, col="orange")
+boxplot(DatosDenver$X5, main="Cambio porcentual ultimos 5 años" , col="orange")
 #X6
 info(DatosDenver$X6)
-hist(DatosDenver$X6, main="Histograma de X6", ylab = "Frecuencias" , xlab = "Histograma de X6", right = F, col="green")
-boxplot(DatosDenver$X6, main="Diagrama de caja de X6" , col="green")
+hist(DatosDenver$X6, main="Tasa crimen por cada mil habs", ylab = "Frecuencias" , xlab = "Tasa crimen por cada mil habs", right = F, col="green")
+boxplot(DatosDenver$X6, main="Tasa crimen por cada mil habs" , col="green")
 
 #PREGUNTA 2. Realice un intervalo de confianza del 97 % para la media de cada variable en estudio
 #Para X1
